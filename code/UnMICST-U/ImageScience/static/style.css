@@ -1,0 +1,197 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    border: 0;
+    overflow: hidden; /*  Disable scrollbars */
+    display: block;  /* No floating content on sides */
+    background-color:gray;/*rgb(230,230,230);*/
+    /*https://www.w3schools.com/cssref/css_websafe_fonts.asp*/
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size:13px;
+}
+
+canvas {
+    background-color:black;
+    position: absolute;
+    left: 300px;
+    top: 25px;
+    /* careful with border: it affects mouse location */
+    /* border:3px solid rgb(100,100,100);*/
+}
+
+canvas#top {
+    background-color:black;
+    position: absolute;
+    left: 300px;
+    top: 25px;
+    opacity:0.25;
+    /*border:3px solid rgb(100,100,100);*/
+}
+
+input[type=text] {
+    position: absolute;
+    left:0px;
+    top:0px;
+    width:300px;
+    height:25px;
+    background-color:rgb(200,200,200);
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size:13px;
+}
+
+input[type=text].toollabel {
+    /*-webkit-appearance: none;*/
+    position: absolute;
+    left:10;
+    height:30;
+    width:260;
+    /*background-color:rgb(200,200,200);*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:11px;
+}
+
+input[type=radio] {
+    position: absolute;
+    /*height = 20;*/
+}
+
+input[type=checkbox] {
+    position: absolute;
+    /*height = 20;*/
+}
+
+label {
+    position: absolute;
+    height:30;
+    /*width:100;*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*font-size:11px;*/
+}
+
+div.label {
+    /*-webkit-appearance: none;*/
+    position: absolute;
+    left:10;
+    height:30;
+    width:260;
+    /*background-color:white;*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*font-size:11px;*/
+}
+
+/*svg on top of canvas*/
+div#s {
+    pointer-events: none;
+    position: absolute;
+    left: 300px;
+    top: 25px;
+}
+
+input[type='button'] {
+    /*-webkit-appearance: none;*/
+    position:absolute;
+    left:10;
+    width:260;
+    height:30;
+    font-family: Arial, Helvetica, sans-serif;
+    /*font-size:11px;*/
+}
+
+input[type=range] {
+    /*-webkit-appearance: none;*/
+    position: absolute;
+    left:5;
+    width:250;
+    height:30;
+}
+
+select {
+    /*-webkit-appearance: none;*/
+    position: absolute;
+    left:10;
+    width:255;
+    height:30;    
+    /*background-color:black;*/
+}
+
+div#d {
+    position: absolute;
+    padding-left:10px; /*5px;*/
+    padding-right:10px; /*5px;*/
+    width:280px; /*290px;*/
+    overflow-y:scroll;
+    top:25px;
+    /*background-color:white;*/
+}
+
+div#t {
+    position: absolute;
+    left:10;
+    width:278;
+    /*bottom:10;*/
+    /*height:0;*/
+    background-color:rgb(200,200,200);
+    border-style: solid;
+    border-color: rgb(100,100,100);
+    border-width: 1px;
+    opacity:0;
+}
+
+div#icons {
+    /*background-color:gray;*/
+    position: absolute;
+    left:300px;
+    top:2px;
+    height:23px;
+}
+
+p.left {
+    color:black;
+}
+
+p.right {
+    text-align: right;
+    color: white;
+}
+
+i.fa {
+    font-size:20px;
+    color:rgb(200,200,200);
+}
+
+i.fa-mouse-pointer {
+    position: relative;
+    left:15px;
+    /*font-weight:bold;*/
+    /*text-shadow:2px 2px 4px #000000;"*/
+}
+
+i.fa-search-plus {
+    position: relative;
+    left:25px;
+}
+
+i.fa-search-minus {
+    position: relative;
+    left:35px;
+}
+
+i.fa-arrows {
+    position: relative;
+    left:45px;
+    color:white;
+}
+
+/*i.fa-window-maximize {
+    position: relative;
+    left:75px;
+}*/
+
+input[type=file] {
+    position:absolute;
+    left:10;
+    top:10;
+    width:260;
+    height:30;
+}

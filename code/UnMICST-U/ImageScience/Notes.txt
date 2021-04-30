@@ -1,0 +1,56 @@
+To do:
+
+Client side
+    > update global 'adjust contrast' (to be available not only during annotation)
+    > correct 'move' bug (image can be dragged to the right when click and drag to right for click done to the left of image)
+    > update removeVerticalSlider for cases when there are other svg elements besides vertical slider (e.g. horizontal slider)
+    > allow segmentation threshold to turn off 'watershed' part
+    > reset annotation and segmentation steps (when procedure interrupted)
+	> button/command to centralize image (as when just loaded)
+	> plot data on top of image (e.g. points, circles)
+    > add 'Cancel' button to segmentation tools; have 'Done' button change the image to show the segmentation mask via IP op
+
+Server side
+    > add session; handle multiple users
+    > host! see...
+    https://www.jakowicz.com/flask-apache-wsgi/
+	http://terokarvinen.com/2017/write-python-3-web-apps-with-apache2-mod_wsgi-install-ubuntu-16-04-xenial-every-tiny-part-tested-separately
+	http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/#installing-mod-wsgi
+    http://flask-socketio.readthedocs.io/en/latest/
+
+-----
+
+Dependencies (install all with conda_install_dependencies.sh)
+    Flask (conda install -c anaconda flask)
+    Flask-SocketIO (conda install -c conda-forge flask-socketio)
+    Numpy (conda install -c anaconda numpy)
+    PIL (conda install -c anaconda pillow)
+    Scikit-Image (conda install scikit-image)
+    TiffFile (conda install -c conda-forge tifffile)
+    Scikit-Learn (conda install scikit-learn)
+    Gevent (conda install -c anaconda gevent, conda install -c anaconda gevent-websocket)
+    (alternatively to Gevent) Eventlet (conda install -c conda-forge eventlet)
+
+-----
+
+Assumptions:
+    > for 4D images, dimension 0 is z (plane), dimension 1 is channel (that's how tifffile reads it)
+    > for 3D images, the 0th dimention is either time, channel, or plane (z), depending on the context
+
+-----
+ 
+Talk to Andy Bergman and Doug Feldmann in RC about webhosting. --Amir Karger
+
+-----
+
+One Class Classification (for single class segmentation)
+
+Anomaly Detection using One-Class Neural Networks: https://arxiv.org/pdf/1802.06360.pdf
+Learning Deep Features for One-Class Classification: https://arxiv.org/pdf/1801.05365.pdf
+https://www.quora.com/Do-you-have-any-implementation-of-one-class-classification-using-neural-network
+http://scikit-learn.org/stable/modules/outlier_detection.html#outlier-detection
+(2 class techniques) http://vis-www.cs.umass.edu/fddb/results.html (for background sampling, see p. 3 here: https://arxiv.org/pdf/1608.02236.pdf)
+
+-----
+
+https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging

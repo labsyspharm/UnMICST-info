@@ -1,0 +1,54 @@
+<!-- http://htmlcheats.com/html/resize-the-html5-canvas-dyamically/ -->
+
+<!-- <!DOCTYPE html>  -->
+<html>   
+<head>
+    <meta charset="utf-8">
+    <title>ImageScience</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css" />
+    <!-- for icons; ref: https://www.w3schools.com/icons/fontawesome_icons_webapp.asp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../static/Icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/jquery-ui-1.12.1.custom/jquery-ui.css">
+
+    <!-- SocketIO -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+</head>
+ 
+<body>
+    <!-- prompt -->
+    <input type='text' name='text' id='i' value='' autocomplete='off' autocorrect='off' autocapitalize='off'>
+
+    <!-- dialog area -->
+    <div id='d'></div>
+
+    <!-- tool -->
+    <div id='t'></div>
+
+    <!-- icons -->
+    <div id='icons'>
+        <i id='icon-pointer'; class='fa fa-mouse-pointer'></i>
+        <i id='icon-zoomin'; class='fa fa-search-plus'></i>
+        <i id='icon-zoomout'; class='fa fa-search-minus'></i>
+        <i id='icon-move'; class='fa fa-arrows'></i>
+        <!-- <i id='icon-maximize'; class='fa fa-window-maximize'></i> -->
+    </div>
+
+    <!-- canvas -->
+    <canvas id='c' ></canvas>
+
+    <!-- svg, on top of canvas, for info -->
+    <div id='s'></div>
+
+    <!-- scripts -->
+    <script src='../static/jquery-3.2.1.min.js'></script>
+    <script src='../static/jquery-ui-1.12.1.custom/jquery-ui.js'></script>
+    <script src='../static/svg.min.js'></script>
+    <script src='../static/script.js'></script>
+</body>
+ 
+</html>

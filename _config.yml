@@ -1,0 +1,8 @@
+title: "UnMICST"
+remote_theme: pmarsceill/just-the-docs
+search_enabled: false
+
+parse_block_html: true
+
+plugins:
+  - jekyll-remote-theme

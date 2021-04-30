@@ -1,0 +1,27 @@
+model:
+    arch: pspnet
+data:
+    dataset: DNA_NoAug
+    train_split: train
+    val_split: valid
+    img_rows: 256
+    img_cols: 256
+    path: /n/pfister_lab2/Lab/vcg_biology/cycif/DapiUnetTrainingData/LPTCGSdapilaminRTAug64/
+training:
+    pretrain: False
+    n_workers: 8
+    train_iters: 15000
+    batch_size: 8
+    val_interval: 500
+    print_interval: 100
+    loss:
+        name: multi_scale_cross_entropy
+    optimizer:
+        name: adam
+        lr: 1.0e-4
+        weight_decay: 0.005
+    lr_schedule:
+        name: constant_lr
+    augmentations:
+
+    resume:

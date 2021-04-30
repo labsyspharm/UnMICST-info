@@ -1,0 +1,217 @@
+{
+    "Images": [
+        {
+            "Name": "i0",
+            "Description": "Non-neoplastic small intestine",
+            "Path": "../images/121outlines",
+            "Width": 2975,
+            "Height": 2975,
+            "MaxLevel": 2
+        }
+    ],
+    "Header": "Core #121 from TMA11 of the Exemplar Microscopy Images of Tissues (EMIT) https://www.synapse.org/#!Synapse:syn22345748.\n\nStained and imaged using Cyclic Immunofluorescence (CyCIF) with 64 channels at a sampling rate of 0.65 microns/pixel.\n\nIncluded as part of figure 6 from the manuscript : UnMICST: Deep learning with real augmentation for robust segmentation of highly multiplexed images of human tissues",
+    "Rotation": 0,
+    "Layout": {
+        "Grid": [
+            [
+                "i0"
+            ]
+        ]
+    },
+    "Stories": [
+        {
+            "Name": "",
+            "Description": "",
+            "Waypoints": [
+                {
+                    "Name": "Overview",
+                    "Description": "",
+                    "Arrows": [],
+                    "Overlays": [],
+                    "Group": "Overview",
+                    "Masks": [],
+                    "ActiveMasks": [],
+                    "Zoom": 0.48225308641975323,
+                    "Pan": [
+                        0.5000000000000008,
+                        0.5001397916666667
+                    ]
+                },
+                {
+                    "Name": "Comparing nuclear envelope stains",
+                    "Description": "Segmentation is typically performed using a DNA channel, such as Hoechst or DAPI. Staining for the nuclear envelope stain as an additional channel can help improve accuracy by providing more contrast between densely packed nuclei. Here, the nuclear envelope stain consisted of lamin B2 and NUP98. Other lamin markers such as lamin B1 and lamin A/C are also possible, however, lamin A/C stains for fewer nuclei.",
+                    "Arrows": [],
+                    "Overlays": [],
+                    "Group": "Nuclear envelope stains",
+                    "Masks": [],
+                    "ActiveMasks": [],
+                    "Zoom": 1.728,
+                    "Pan": [
+                        0.39614917042073444,
+                        0.4677967462722536
+                    ]
+                },
+                {
+                    "Name": "Segmentation",
+                    "Description": "Using the DNA and nuclear envelope stain, the nuclei are segmented into a label mask. Here, each nuclei object is outlined in purple and overlayed on the DNA channel (green). Notice how the densely packed nuclei can still be segmented. ",
+                    "Arrows": [],
+                    "Overlays": [],
+                    "Group": "segmentation outlines",
+                    "Masks": [],
+                    "ActiveMasks": [],
+                    "Zoom": 2.9859839999999997,
+                    "Pan": [
+                        0.46887659046708874,
+                        0.7402302973539991
+                    ]
+                },
+                {
+                    "Name": "Segmentation and cell-types",
+                    "Description": "UMAP projection followed by density-based clustering using the segmentation from UnMICST and the integral intensities of staining from 14 marker proteins. The clustering result reveals a very small population of `E-cadherin` (green) and `CD45` (purple) double positive cells. Such a cell type currently does not exist; the very low abundance indicates accurate segmentation. Further inspection shows these to be T-cells tightly associated between epithelial cells, a known phenomenon. Therefore, future improvements in segmentation will also need to take into consideration of such rare but biologically significant spatial arrangements.\n\nUMAP colored by clustering result ![UMAP by cluster](../images/umap-clustering.png)\n\nand by integrated intensities of CD45 and E-cadherin in each segments ![UMAP by markers](../images/umap-markers.png)",
+                    "Arrows": [
+                        {
+                            "Point": [
+                                0.5475921452512824,
+                                0.7595341856421746
+                            ],
+                            "HideArrow": false
+                        },
+                        {
+                            "Point": [
+                                0.5426468522538632,
+                                0.7766503586776505
+                            ],
+                            "HideArrow": false
+                        },
+                        {
+                            "Point": [
+                                0.5297212724219302,
+                                0.7580908964927765
+                            ],
+                            "HideArrow": false
+                        }
+                    ],
+                    "Overlays": [],
+                    "Group": "UMAP",
+                    "Masks": [
+                        "121_cluster_scatter",
+                        "121_cluster_mask",
+                        "121_cluster_scatter-fig_6"
+                    ],
+                    "ActiveMasks": [
+                        "121_cluster_scatter"
+                    ],
+                    "Zoom": 3.215,
+                    "Pan": [
+                        0.5705,
+                        0.7735
+                    ]
+                }
+            ]
+        }
+    ],
+    "Masks": [
+        {
+            "Path": "121_cluster_mask",
+            "Name": "121_cluster_mask",
+            "Colors": [
+                "ffffff"
+            ],
+            "Channels": [
+                "all cells"
+            ]
+        },
+        {
+            "Path": "121_cluster_scatter",
+            "Name": "121_cluster_scatter",
+            "Colors": [
+                "ffffff"
+            ],
+            "Channels": [
+                "all cells"
+            ]
+        },
+        {
+            "Path": "121_cluster_scatter-fig_6",
+            "Name": "121_cluster_scatter-fig_6",
+            "Colors": [
+                "ffffff"
+            ],
+            "Channels": [
+                "all cells"
+            ]
+        }
+    ],
+    "Groups": [
+        {
+            "Name": "Overview",
+            "Path": "Overview_14__CD3D--19__IRF3--22__CALP--23__NUP98--33__LMNAC--42__OGT--50__KI67--54__EPCAM--58__ECAD--0__DNA2",
+            "Colors": [
+                "ffff00",
+                "ddff00",
+                "ffda00",
+                "000aff",
+                "00ff1c",
+                "ff0000",
+                "007fff",
+                "0099ff",
+                "71cdfa",
+                "a800ff"
+            ],
+            "Channels": [
+                "CD3D",
+                "IRF3",
+                "CALP",
+                "NUP98",
+                "LMNAC",
+                "OGT",
+                "KI67",
+                "EPCAM",
+                "ECAD",
+                "DNA2"
+            ]
+        },
+        {
+            "Name": "segmentation outlines",
+            "Path": "segmentation-outlines_0__DNA2--64__outlines",
+            "Colors": [
+                "00ff00",
+                "ff00ff"
+            ],
+            "Channels": [
+                "DNA2",
+                "outlines"
+            ]
+        },
+        {
+            "Name": "UMAP",
+            "Path": "UMAP_8__DNA4--11__CD45--58__ECAD",
+            "Colors": [
+                "0000ff",
+                "9f00ff",
+                "00ff00"
+            ],
+            "Channels": [
+                "DNA4",
+                "CD45",
+                "E-cadherin"
+            ]
+        },
+        {
+            "Name": "Nuclear envelope stains",
+            "Path": "Nuclear-envelope-stains_25__LMNB1--33__LMNAC--47__LMNB2--23__NUP98",
+            "Colors": [
+                "00d7ff",
+                "00ff00",
+                "ff0000",
+                "ff0000"
+            ],
+            "Channels": [
+                "LMNB1",
+                "LMNAC",
+                "LMNB2",
+                "NUP98"
+            ]
+        }
+    ]
+}
