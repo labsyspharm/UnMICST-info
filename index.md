@@ -25,12 +25,12 @@ Development of UnMICST is led by Clarence Yapp (Laboratory of Systems Pharmacolo
 Please see the `/code` folder for instructions on how to run scripts. Also included are scripts to either train or run specific models where the filename indicates the training scenario.  Ie. DNA_NES_Aug indicates the script is designed for training with DNA, the nuclear envelope staining and real augmentation. DNA_NoAug indicates the model was only trained on the DNA channel.<br>
 
 ## Download training data and models
-We provide training data, annotations and models that can be freely downloaded here: https://www.dropbox.com/sh/3aqp83f5w1pxk0y/AABFgNRMJD2EvfSLFgCrXrBba?dl=0<br>
+We provide training data, annotations and models that can be freely downloaded here upon account registration: www.synapse.org/unmicst <br>
 1.`/models` contains UNet, Mask RCNN and PSPNet model files. Each model should be unzipped and placed at the same level as its corresponding script in the code folder.
 <br>
 2.`/training data` contains a .rar file with the training, validation, and test data used to train the aforementioned UNet, Mask RCNN, and PSPNet models. In order to train new models using our scripts, this should be unzipped and placed at the same level as its corresponding script in the code folder <br>
 <br>
-3.`compiledTrainingExamples.rar` contains the raw images and annotated labels prior to splitting into tiles and into a train/validation/test split. Approximately 10,400 nuclei from 7 tissue types (normal ovary, small intestine, tonsil, and cancers of colon, brain, lung, and prostate) were manually annotated.<br>
+3.`Annotations by tissue type` contains the raw images and annotated labels prior to splitting into tiles and into a train/validation/test split. Approximately 10,400 nuclei from 7 tissue types (normal ovary, small intestine, tonsil, and cancers of colon, brain, lung, and prostate) were manually annotated.<br>
 
 ## Data Explorations
 
